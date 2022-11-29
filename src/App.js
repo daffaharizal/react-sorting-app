@@ -42,15 +42,13 @@ function App() {
       },
    ];
 
-   useEffect(() => {
-      dataCourses.filter((value) => {
-         if (Kategori == "semua") {
-            return true;
-         } else {
-            return Kategori == value.kategori;
-         }
-      });
-   }, [Kategori]);
+   dataCourses.filter((value) => {
+      if (Kategori == "semua") {
+         return true;
+      } else {
+         return Kategori == value.kategori;
+      }
+   });
 
    return (
       <>
@@ -73,15 +71,13 @@ function App() {
          </div>
          <div className="container font">
             <div className="row">
-               {dataCourses
-                  .map((course, index) => (
-                     <div key={index} className="col-4 p-5 rounded shadow-sm my-2 text-center">
-                        <h6 className="text-secondary">{course.kategori}</h6>
-                        <h1 className="fw-bolder">{course.judul}</h1>
-                        <p className="text-secondary">{course.caption}</p>
-                     </div>
-                  ))
-                  .filter()}
+               {dataCourses.map((course, index) => (
+                  <div key={index} className="col-4 p-5 rounded shadow-sm my-2 text-center">
+                     <h6 className="text-secondary">{course.kategori}</h6>
+                     <h1 className="fw-bolder">{course.judul}</h1>
+                     <p className="text-secondary">{course.caption}</p>
+                  </div>
+               ))}
             </div>
          </div>
       </>
