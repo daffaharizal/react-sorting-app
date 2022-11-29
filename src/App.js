@@ -40,9 +40,7 @@ function App() {
          judul: "Python",
          caption: "Python - Data Science",
       },
-   ];
-
-   dataCourses.filter((value) => {
+   ].filter((value) => {
       if (Kategori == "semua") {
          return true;
       } else {
@@ -55,7 +53,9 @@ function App() {
          <div className="mx-auto text-center p-4 font">
             <p className="btn btn-primary">Daftar Kelas</p>
             <h2 className="mb-3 fw-bolder">Kelas Bootcamp Yang Tersedia</h2>
-            <button className="mx-2 btn btn-success">Semua</button>
+            <button className="mx-2 btn btn-success" onClick={() => setKategori("semua")}>
+               Semua
+            </button>
             <button className="mx-2 btn btn-outline-success" onClick={() => setKategori("development")}>
                Development
             </button>
