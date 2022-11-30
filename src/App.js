@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState } from "react";
+import Course from "./components/Course";
 
 function App() {
    const [Kategori, setKategori] = useState("semua");
@@ -75,9 +76,7 @@ function App() {
             <div className="row">
                {courseCategory.map((course, index) => (
                   <div key={index} className="col-4 p-5 rounded shadow-sm my-2 text-center">
-                     <h6 className="text-secondary">{course.kategori}</h6>
-                     <h1 className="fw-bolder">{course.judul}</h1>
-                     <p className="text-secondary">{course.caption}</p>
+                     <Course kategori={course.kategori} judul={course.judul} caption={course.judul} />
                   </div>
                ))}
             </div>
