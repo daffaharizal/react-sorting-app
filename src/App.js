@@ -40,7 +40,9 @@ function App() {
          judul: "Python",
          caption: "Python - Data Science",
       },
-   ].filter((value) => {
+   ];
+
+   let courseCategory = dataCourses.filter((value) => {
       if (Kategori == "semua") {
          return true;
       } else {
@@ -71,7 +73,7 @@ function App() {
          </div>
          <div className="container font">
             <div className="row">
-               {dataCourses.map((course, index) => (
+               {courseCategory.map((course, index) => (
                   <div key={index} className="col-4 p-5 rounded shadow-sm my-2 text-center">
                      <h6 className="text-secondary">{course.kategori}</h6>
                      <h1 className="fw-bolder">{course.judul}</h1>
