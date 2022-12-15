@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Course from "./components/Course";
 
 function App() {
@@ -56,19 +56,19 @@ function App() {
          <div className="mx-auto text-center p-4 font">
             <p className="btn btn-primary">Daftar Kelas</p>
             <h2 className="mb-3 fw-bolder">Kelas Bootcamp Yang Tersedia</h2>
-            <button className={`mx-2 btn btn-outline-success ${Kategori == "semua" ? "btn-success active" : "btn-outline-success"}`} onClick={() => setKategori("semua")}>
+            <button className={`mx-2 btn btn-outline-success ${Kategori === "semua" ? "btn-success active" : "btn-outline-success"}`} onClick={() => setKategori("semua")}>
                Semua
             </button>
-            <button className={`mx-2 btn btn-outline-success ${Kategori == "development" ? "btn-success active " : "btn-outline-success"}`} onClick={() => setKategori("development")}>
+            <button className={`mx-2 btn btn-outline-success ${Kategori === "development" ? "btn-success active " : "btn-outline-success"}`} onClick={() => setKategori("development")}>
                Development
             </button>
-            <button className={`mx-2 btn btn-outline-success ${Kategori == "design" ? "btn-success active" : "btn-outline-success"}`} onClick={() => setKategori("design")}>
+            <button className={`mx-2 btn btn-outline-success ${Kategori === "design" ? "btn-success active" : "btn-outline-success"}`} onClick={() => setKategori("design")}>
                Design
             </button>
-            <button className={`mx-2 btn btn-outline-success ${Kategori == "marketing" ? "btn-success active" : "btn-outline-success"}`} onClick={() => setKategori("marketing")}>
+            <button className={`mx-2 btn btn-outline-success ${Kategori === "marketing" ? "btn-success active" : "btn-outline-success"}`} onClick={() => setKategori("marketing")}>
                Marketing
             </button>
-            <button className={`mx-2 btn btn-outline-success ${Kategori == "datascience" ? "btn-success active" : "btn-outline-success"}`} onClick={() => setKategori("datascience")}>
+            <button className={`mx-2 btn btn-outline-success ${Kategori === "datascience" ? "btn-success active" : "btn-outline-success"}`} onClick={() => setKategori("datascience")}>
                Data Science
             </button>
          </div>
