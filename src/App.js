@@ -44,10 +44,10 @@ function App() {
    ];
 
    let courseCategory = dataCourses.filter((value) => {
-      if (Kategori == "semua") {
+      if (Kategori === "semua") {
          return true;
       } else {
-         return Kategori == value.kategori;
+         return Kategori === value.kategori;
       }
    });
 
