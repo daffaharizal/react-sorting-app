@@ -79,6 +79,7 @@ function App() {
                      <Course kategori={course.kategori} judul={course.judul} caption={course.judul} />
                   </div>
                ))}
+               <h1>Hello world!</h1>
             </div>
          </div>
       </>
